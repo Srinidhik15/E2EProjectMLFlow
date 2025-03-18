@@ -4,8 +4,6 @@ from mlProject import logger
 from pathlib import Path
 
 
-
-
 STAGE_NAME = "Data Transformation stage"
 
 class DataTransformationTrainingPipeline:
@@ -13,7 +11,7 @@ class DataTransformationTrainingPipeline:
         pass
 
 
-    def main(self):
+    def initiate_data_transformation(self):
         try:
             with open(Path("artifacts/data_validation/status.txt"), "r") as f:
                 status = f.read().split(" ")[-1]
@@ -38,7 +36,7 @@ if __name__ == '__main__':
     try:
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = DataTransformationTrainingPipeline()
-        obj.main()
+        obj.initiate_data_transformation()
         logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
         logger.exception(e)

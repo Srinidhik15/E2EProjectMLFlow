@@ -1,3 +1,5 @@
+# This is an automated script just to create a project structure
+
 import os
 from pathlib import Path
 import logging
@@ -34,7 +36,6 @@ list_of_files = [
 
 
 ]
-
 
 
 

@@ -1,6 +1,6 @@
-from mlProject.constants import *
-from mlProject.utils.common import read_yaml, create_directories
-from mlProject.entity.config_entity import (DataIngestionConfig,
+from src.mlProject.constants import *
+from src.mlProject.utils.common import read_yaml, create_directories
+from src.mlProject.entity.config_entity import (DataIngestionConfig,
                                             DataValidationConfig,
                                             DataTransformationConfig,
                                             ModelTrainerConfig,
@@ -36,6 +36,10 @@ class ConfigurationManager:
         return data_ingestion_config
     
 
+
+
+    
+
     def get_data_validation_config(self) -> DataValidationConfig:
         config = self.config.data_validation
         schema = self.schema.COLUMNS
@@ -51,7 +55,10 @@ class ConfigurationManager:
 
         return data_validation_config
     
+    
 
+
+    
 
     def get_data_transformation_config(self) -> DataTransformationConfig:
         config = self.config.data_transformation
@@ -65,6 +72,9 @@ class ConfigurationManager:
 
         return data_transformation_config
     
+
+
+
 
 
     def get_model_trainer_config(self) -> ModelTrainerConfig:
@@ -86,6 +96,9 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    
+
+
     
 
 

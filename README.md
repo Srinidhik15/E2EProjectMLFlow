@@ -1,15 +1,23 @@
 # End-to-end-Machine-Learning-Project-with-MLflow
 
+## Workflow
+
+1. Data Ingestion
+2. Data Validation
+3. Data Transformation
+4. Model Trainer
+5. Model Evaluation
+
 
 ## Workflows
 
 1. Update config.yaml
 2. Update schema.yaml
 3. Update params.yaml
-4. Update the entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipeline 
+4. Update the entity        #this is write in src/entity/config-entity.py
+5. Update the configuration manager in src config    #this is write in src/config/configuration.py
+6. Update the components    # this we write in src/components/data_ingestion.py etc
+7. Update the pipeline      # this we write in src/pipeline/data_ingestion.py etc
 8. Update the main.py
 9. Update the app.py
 

@@ -1,6 +1,6 @@
-from mlProject.config.configuration import ConfigurationManager
-from mlProject.components.data_ingestion import DataIngestion
-from mlProject import logger
+from src.mlProject.config.configuration import ConfigurationManager
+from src.mlProject.components.data_ingestion import DataIngestion
+from src.mlProject import logger
 
 
 
@@ -10,7 +10,7 @@ class DataIngestionTrainingPipeline:
     def __init__(self):
         pass
 
-    def main(self):
+    def initiate_data_ingestion(self):
         config = ConfigurationManager()
         data_ingestion_config = config.get_data_ingestion_config()
         data_ingestion = DataIngestion(config=data_ingestion_config)
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     try:
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = DataIngestionTrainingPipeline()
-        obj.main()
+        obj.initiate_data_ingestion()
         logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
         logger.exception(e)
