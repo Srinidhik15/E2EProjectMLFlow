@@ -14,7 +14,7 @@ def homePage():
 
 @app.route('/train',methods=['GET'])  # route to train the pipeline
 def training():
-    os.system("python main.py")
+    os.system("python main.py")        # this executes the python main.py
     return "Training Successful!" 
 
 
